@@ -9,8 +9,6 @@ services:
       - -c
       - |
         python -m smtpd -n -c DebuggingServer localhost:25 &
-        python manage.py runserver 0.0.0.0:8001
-    volumes:
-      - /mnt/c/work/docker/bbtest/bbtest:/code
+        python bbtest/bbtest/manage.py runserver 0.0.0.0:8001
     ports:
       - "8001:8001"

@@ -3,4 +3,4 @@ ENV PYTHONUNBUFFERED 1
 RUN pip install django
 RUN mkdir /code
 WORKDIR /code
-COPY . /code/
+RUN git clone https://github.com/bharanimanoharan/bbtest.git
